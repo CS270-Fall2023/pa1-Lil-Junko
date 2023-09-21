@@ -1,10 +1,12 @@
-all: 
-	gcc -c main.c
-	gcc -c token.c
-	gcc main.o token.o -o token
+CC = gcc
 
+all: 
+	$(CC) -c main.c
+	$(CC) -c token.c
+	$(CC) main.o token.o -o token
+	
 clean:
 	rm -f *.o token
-	
+
 run: token
 	./token
