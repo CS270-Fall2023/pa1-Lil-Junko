@@ -3,10 +3,10 @@ CC = gcc
 all: 
 	$(CC) -c main.c
 	$(CC) -c token.c
-	$(CC) main.o token.o -o token
-	
-clean:
-	rm -f *.o token
+	$(CC) $< main.o token.o -o $@
 
-run: token
-	./token
+clean:
+	rm -f *.o all
+
+run: all
+	./all
